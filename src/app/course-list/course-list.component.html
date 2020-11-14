@@ -1,1 +1,16 @@
-<p>course-list works!</p>
+<h1>Course List {{courses.length}}</h1>
+
+<h3>{{newCourseTitle}}</h3>
+
+<ul class="list-group">
+  <li
+    class="list-group-item"
+    *ngFor="let course of courses">
+    <a href="/details/{{course._id}}">
+      {{course.title}}
+    </a>
+  </li>
+</ul>
+
+
+<h1>{{newCourseTitle}}</h1>
