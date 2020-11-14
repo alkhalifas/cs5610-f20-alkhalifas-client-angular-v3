@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "cs5610-f20-alkhalifas-client-angular-v3"
+    }
+  },
+  "defaultProject": "cs5610-f20-alkhalifas-client-angular-v3",
+  "cli": {
+    "analytics": "a0f9024f-6e53-43e7-b1aa-2124e5f0c8ca"
+  }
 }
