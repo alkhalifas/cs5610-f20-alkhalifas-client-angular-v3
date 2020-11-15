@@ -9,6 +9,7 @@ import {CourseServiceClient} from './services/course-services';
 import { CourseViewerComponent } from './course-viewer/course-viewer.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ModuleListComponent } from './module-list/module-list.component';
+import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ModuleListComponent } from './module-list/module-list.component';
     CourseListComponent,
     CourseViewerComponent,
     HomePageComponent,
-    ModuleListComponent
+    ModuleListComponent,
+    LessonTabsComponent
   ],
   imports: [
     BrowserModule,

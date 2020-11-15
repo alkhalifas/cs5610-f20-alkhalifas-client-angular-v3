@@ -10,6 +10,7 @@ const routes: Routes = [
   {path: '', component: HomePageComponent},
   {path: 'details/:courseId', component: CourseViewerComponent},
   {path: 'details/:courseId/modules/:moduleId', component: CourseViewerComponent},
+  {path: 'details/:courseId/modules/:moduleId/lessons/:lessonId', component: CourseViewerComponent},
 ];
 
 @NgModule({
