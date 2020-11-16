@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {CourseServiceClient} from '../services/course-services';
 import {ActivatedRoute} from '@angular/router';
+import {ModuleServiceClient} from '../services/module-service';
 
 @Component({
   selector: 'app-module-list',
@@ -9,7 +9,7 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class ModuleListComponent implements OnInit {
 
-  constructor(private service: CourseServiceClient,
+  constructor(private service: ModuleServiceClient,
               private route: ActivatedRoute) { }
 
   modules = [];
@@ -20,8 +20,7 @@ export class ModuleListComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.courseId = params.courseId;
       this.moduleId = params.moduleId;
-      fetch(`https://wbdv-generic-server.herokuapp.com/api/alkhalifas/courses/${this.courseId}/modules`)
-        .then(response => response.json())
+      this.service.findModulesForCourse(this.courseId)
         .then(modules => this.modules = modules);
     });
   }

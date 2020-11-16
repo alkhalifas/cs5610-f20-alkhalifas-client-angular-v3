@@ -1,14 +1,30 @@
-<a href="/courses">
-  Back
-</a>
-<h1>{{course.title}}</h1>
+<div class="container">
+
+  <div class="row">
+    <div class="p-2">
+      <a href="/courses">
+        <i class="fas fa-2x fa-window-close text-black-50"></i>
+      </a>
+    </div>
+    <div>
+      <h1>{{course.title}}</h1>
+
+    </div>
+  </div>
+
+
+
+</div>
+
+
 
 <div class="row">
   <div>
     <app-module-list></app-module-list>
   </div>
 
-  <div>
+  <div
+  class="ml-3">
     <app-lesson-tabs></app-lesson-tabs>
   </div>
 </div>

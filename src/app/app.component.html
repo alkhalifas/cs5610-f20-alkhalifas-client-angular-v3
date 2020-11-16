@@ -1,4 +1,30 @@
+
 <div class="container">
-  <h1>NAVBAR</h1>
-  <router-outlet></router-outlet>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark wbdv-field wbdv-hamburger">
+    <a class="navbar-brand" href="#">
+      <h3>Whiteboard</h3>
+    </a>
+    <button aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"
+            class="navbar-toggler" data-target="#navbarText" data-toggle="collapse" type="button">
+    <span class="navbar-toggler-icon">
+
+    </span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <a class="mr-2 text-white" href="/">Home </a>
+        <a class="mr-2 text-white" href="/login">Login </a>
+        <a class="mr-2 text-white" href="/register">Register </a><a
+        class="mr-2 text-white" href="/profile">Profile </a>
+        <a class="mr-2 text-white" href="/courses">Courses</a>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="nav-bar-diff">
+    <br/>
+    <router-outlet></router-outlet>
+
+  </div>
 </div>

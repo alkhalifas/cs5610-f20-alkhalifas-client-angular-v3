@@ -2,7 +2,7 @@
 
 <ul class="list-group">
   <li class="list-group-item"
-      [class]="{'list-group-item-secondary': moduleId === module._id}"
+      [class]="{'active': moduleId === module._id}"
       *ngFor="let module of modules">
       <a routerLink="/details/{{courseId}}/modules/{{module._id}}">
         {{module.title}}
