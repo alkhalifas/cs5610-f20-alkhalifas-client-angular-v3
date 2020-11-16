@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {CourseServiceClient} from '../services/course-services';
 
 @Component({
-  selector: 'app-course-list',
+  selector: 'app-course-table',
   templateUrl: './course-table.component.html',
   styleUrls: ['./course-table.component.css']
 })

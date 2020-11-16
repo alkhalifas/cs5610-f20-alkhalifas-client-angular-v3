@@ -6,11 +6,11 @@ import {HomePageComponent} from './home-page/home-page.component';
 import {ModuleListComponent} from './module-list/module-list.component';
 
 const routes: Routes = [
-  {path: 'courses', component: CourseTableComponent},
   {path: '', component: HomePageComponent},
-  {path: 'details/:courseId', component: CourseViewerComponent},
-  {path: 'details/:courseId/modules/:moduleId', component: CourseViewerComponent},
-  {path: 'details/:courseId/modules/:moduleId/lessons/:lessonId', component: CourseViewerComponent},
+  {path: 'courses', component: CourseTableComponent},
+  {path: 'courses/:courseId', component: CourseViewerComponent},
+  {path: 'courses/:courseId/modules/:moduleId', component: CourseViewerComponent},
+  {path: 'courses/:courseId/modules/:moduleId/lessons/:lessonId', component: CourseViewerComponent},
 ];
 
 @NgModule({
