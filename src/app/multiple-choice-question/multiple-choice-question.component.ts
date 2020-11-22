@@ -9,7 +9,7 @@ import {faCheck, faTimes} from '@fortawesome/free-solid-svg-icons';
 export class MultipleChoiceQuestionComponent implements OnInit {
 
   @Input()
-  question = {_id: '', title: '', question: '', answer: '', correct: '', choices: []};
+  question = {_id: '', title: '', question: '', choices: [], correct: '', answer: '' }
   graded = false;
   answer = 'Pending';
 

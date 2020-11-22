@@ -3,8 +3,8 @@
     <div>
       {{question.question}}
       <span [hidden]="!graded">
-        <i [hidden]="answer === question.correct" class="fas fa-times float-right"></i>
-        <i [hidden]="answer !== question.correct" class="fas fa-check float-right"></i>
+        <i [hidden]="answer === question.correct" class="fas fa-check float-right"></i>
+        <i [hidden]="answer !== question.correct" class="fas fa-times float-right"></i>
       </span>
     </div>
   </h4>
