@@ -1,1 +1,53 @@
-<p>true-false-question works!</p>
+<div class="m-2 p-2">
+  <h4>
+    <div>
+      {{question.question}}
+      <span [hidden]="!graded">
+        <i [hidden]="answer === this.question.correct" class="fas fa-check float-right"></i>
+        {{answer}}
+        {{this.question.correct}}
+        <i [hidden]="answer !== this.question.correct" class="fas fa-times float-right"></i>
+      </span>
+    </div>
+  </h4>
+
+  <ul class="list-group m-2">
+    <li class="list-group-item
+    {{graded && 'false' === answer && 'true' === question.correct? 'list-group-item-success': ''}}
+    {{graded && 'true' === answer && 'true' !== question.correct? 'list-group-item-danger': ''}}
+    {{graded && 'true' === answer && 'true' === question.correct? 'list-group-item-success': ''}}">
+      <label>
+        <input [(ngModel)]="answer" type="radio" value="true" name="{{question._id}}">
+        True
+      </label>
+      <span class="float-right" [hidden]="!graded">
+          <i [hidden]="'true' === question.correct" class="fas fa-times float-right"></i>
+          <i [hidden]="'false' === question.correct" class="fas fa-check float-right"></i>
+      </span>
+    </li>
+    <li class="list-group-item
+    {{graded && 'true' === answer && 'false' === question.correct? 'list-group-item-success': ''}}
+    {{graded && 'false' === answer && 'false' !== question.correct? 'list-group-item-danger': ''}}
+    {{graded && 'false' === answer && 'false' === question.correct? 'list-group-item-success': ''}}">
+      <label>
+        <input [(ngModel)]="answer" type="radio" value="false" name="{{question._id}}">
+        False
+      </label>
+      <span class="float-right" [hidden]="!graded">
+          <i [hidden]="'true' === question.correct" class="fas fa-check float-right"></i>
+          <i [hidden]="'false' === question.correct" class="fas fa-times float-right"></i>
+      </span>
+    </li>
+  </ul>
+  <br>
+  <div>
+    Your Answer: <span [hidden]="graded === false">{{answer}}</span>
+  </div>
+  <br>
+  <div>
+    <button (click)="grade()" class="btn btn-primary float-right">
+      Grade
+    </button>
+  </div>
+  <br>
+</div>

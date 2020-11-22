@@ -1,26 +1,38 @@
-<h2>{{question.question}}</h2>
-<h2>{{question.correct}}</h2>
 <div class="m-2 p-2">
-  <div
-    *ngFor="let choice of question.choices"
-    class="form-check">
-    <input
-           class="form-check-input"
-           type="radio"
-           name="MCRadio"
-           id="{{choice}}"
-           value="{{choice}}">
-    <label
-      class="form-check-label" >
-      {{choice}}
-    </label>
-  </div>
-
-  <div>
-    <div class="float-right">
-      <button
-        class="btn btn-primary"
-      >Grade</button>
+  <h4>
+    <div>
+      {{question.question}}
+      <span [hidden]="!graded">
+        <i [hidden]="answer === question.correct" class="fas fa-times float-right"></i>
+        <i [hidden]="answer !== question.correct" class="fas fa-check float-right"></i>
+      </span>
     </div>
+  </h4>
+
+  <ul class="list-group">
+    <li class="list-group-item
+    {{graded && choice === answer && choice !== question.correct? 'list-group-item-danger': ''}}
+    {{graded && choice === question.correct? 'list-group-item-success': ''}}"
+        *ngFor="let choice of question.choices">
+      <label>
+        <input [(ngModel)]="answer" type="radio" value={{choice}} name="question._id">
+        {{choice}}
+      </label>
+      <span class="float-right" [hidden]="!graded">
+          <i [hidden]="choice !== question.correct" class="fas fa-check float-right"></i>
+          <i [hidden]="choice === question.correct" class="fas fa-times float-right"></i>
+      </span>
+    </li>
+  </ul>
+  <br>
+  <div>
+    Your Answer: <span [hidden]="graded === false">{{answer}}</span>
   </div>
+  <br>
+  <div>
+    <button (click)="grade()" class="btn btn-primary float-right">
+      Grade
+    </button>
+  </div>
+  <br>
 </div>

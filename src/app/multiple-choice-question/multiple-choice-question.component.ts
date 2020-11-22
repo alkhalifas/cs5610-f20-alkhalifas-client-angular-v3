@@ -9,17 +9,21 @@ import {faCheck, faTimes} from '@fortawesome/free-solid-svg-icons';
 export class MultipleChoiceQuestionComponent implements OnInit {
 
   @Input()
-  question = {_id: '', title: '', question: '', choices: [], correct: '', answer: '' };
-  grading = false;
-  faCheck = faCheck; faTimes = faTimes;
+  question = {_id: '', title: '', question: '', answer: '', correct: '', choices: []};
+  graded = false;
+  answer = 'Pending';
 
-  grade = () => { this.grading = true; };
+  grade = () => {
+    this.graded = true;
+    console.log('this.answer: ', this.answer);
+    console.log('this.question.correct: ', this.question.correct);
+    console.log('Grading Status: ', this.graded);
+  }
+
   constructor() { }
 
   ngOnInit(): void {
-    console.log('MC Component');
-    console.log('MC Question: ', this.question.choices);
-    console.log('Grading Status: ', this.grading);
+    console.log('TF Component');
   }
 
 }
