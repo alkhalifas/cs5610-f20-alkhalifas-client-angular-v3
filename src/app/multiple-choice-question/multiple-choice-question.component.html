@@ -1,0 +1,26 @@
+<h2>{{question.question}}</h2>
+<h2>{{question.correct}}</h2>
+<div class="m-2 p-2">
+  <div
+    *ngFor="let choice of question.choices"
+    class="form-check">
+    <input
+           class="form-check-input"
+           type="radio"
+           name="MCRadio"
+           id="{{choice}}"
+           value="{{choice}}">
+    <label
+      class="form-check-label" >
+      {{choice}}
+    </label>
+  </div>
+
+  <div>
+    <div class="float-right">
+      <button
+        class="btn btn-primary"
+      >Grade</button>
+    </div>
+  </div>
+</div>
