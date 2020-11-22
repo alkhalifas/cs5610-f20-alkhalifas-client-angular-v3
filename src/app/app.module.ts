@@ -16,6 +16,7 @@ import {LessonServiceClient} from './services/lesson-service';
 import { QuizzesComponent } from './quizzes/quizzes.component';
 import {QuizzesServiceClient} from './services/quiz-service';
 import { QuizComponent } from './quiz/quiz.component';
+import {QuestionsServiceClient} from './services/question-service';
 // import { QuizComponentComponent } from './quiz-component/quiz-component.component';
 
 @NgModule({
@@ -40,7 +41,8 @@ import { QuizComponent } from './quiz/quiz.component';
     CourseServiceClient,
     ModuleServiceClient,
     LessonServiceClient,
-    QuizzesServiceClient
+    QuizzesServiceClient,
+    QuestionsServiceClient
   ],
   bootstrap: [AppComponent]
 })
