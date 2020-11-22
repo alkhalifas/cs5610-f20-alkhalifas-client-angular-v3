@@ -12,6 +12,7 @@ import { ModuleListComponent } from './module-list/module-list.component';
 import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component';
 import {ModuleServiceClient} from './services/module-service';
 import {LessonServiceClient} from './services/lesson-service';
+import { QuizComponentComponent } from './quiz-component/quiz-component.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {LessonServiceClient} from './services/lesson-service';
     CourseViewerComponent,
     HomePageComponent,
     ModuleListComponent,
-    LessonTabsComponent
+    LessonTabsComponent,
+    QuizComponentComponent
   ],
   imports: [
     BrowserModule,
