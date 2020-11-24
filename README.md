@@ -1,27 +1,21 @@
-# Cs5610F20AlkhalifasClientAngularV3
+## CS 5610 - Whiteboard Application (Angular)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+### Assignments & Updates:
 
-## Development server
+#### Assignment 7: Implementing Component Based Dynamic Web Interfaces with Angular:
+- Implementation of the MEAN stack to develop an online Learning Management System (LMS).
+- Developed nested routes and components to implement embedded Angular user interfaces.
+- Implemented navigation using Angular Routing.
+- Integrated the Angular Application with RESTful APIs.
+- Deployed the [Angular 7 application](https://cs5610-client-angular-alkhalif.herokuapp.com/) to Heroku.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#### Assignment 8: Implementing RESTful Services API with Node.js and Express:
+- Refactored the code to include a services package and a controllers package.
+- Data is still being read in via JSON files. This will change in Assignment 9.
+- The API was [deployed to Heroku](https://cs5610-node-server-a8.herokuapp.com/quizzes/) and is available online.
+- The API is readily utilized by an [Angular 7 application](https://cs5610-client-angular-alkhalif.herokuapp.com/) that renders and grades quizzes.
 
-## Code scaffolding
+![](./media/A8-Quiz%20Animation.gif)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### Assignment 9: Persisting Data in Non-Relational Databases with MongoDB and Mongoose
+...coming soon
