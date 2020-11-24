@@ -19,6 +19,7 @@ import { QuizComponent } from './quiz/quiz.component';
 import {QuestionsServiceClient} from './services/question-service';
 import { MultipleChoiceQuestionComponent } from './multiple-choice-question/multiple-choice-question.component';
 import { TrueFalseQuestionComponent } from './true-false-question/true-false-question.component';
+// import { TestListComponent } from './test-list/test-list.component';
 // import { QuizComponentComponent } from './quiz-component/quiz-component.component';
 
 @NgModule({
@@ -34,6 +35,7 @@ import { TrueFalseQuestionComponent } from './true-false-question/true-false-que
     QuizComponent,
     MultipleChoiceQuestionComponent,
     TrueFalseQuestionComponent,
+    // TestListComponent,
     // QuizComponentComponent
   ],
   imports: [

@@ -10,6 +10,7 @@ export class CourseTableComponent implements OnInit {
 
   constructor(private service: CourseServiceClient) { }
 
+  courseTest = 'WebDev'
   newCourseTitle = '';
   courses = [
     {_id: '123', title: 'Course A'},
