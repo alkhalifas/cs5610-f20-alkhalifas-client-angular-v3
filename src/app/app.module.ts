@@ -12,15 +12,12 @@ import { ModuleListComponent } from './module-list/module-list.component';
 import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component';
 import {ModuleServiceClient} from './services/module-service';
 import {LessonServiceClient} from './services/lesson-service';
-// import { QuizzesComponentComponent } from './quizzes-component/quizzes-component.component';
 import { QuizzesComponent } from './quizzes/quizzes.component';
 import {QuizzesServiceClient} from './services/quiz-service';
 import { QuizComponent } from './quiz/quiz.component';
 import {QuestionsServiceClient} from './services/question-service';
 import { MultipleChoiceQuestionComponent } from './multiple-choice-question/multiple-choice-question.component';
 import { TrueFalseQuestionComponent } from './true-false-question/true-false-question.component';
-// import { TestListComponent } from './test-list/test-list.component';
-// import { QuizComponentComponent } from './quiz-component/quiz-component.component';
 
 @NgModule({
   declarations: [
@@ -30,13 +27,10 @@ import { TrueFalseQuestionComponent } from './true-false-question/true-false-que
     HomePageComponent,
     ModuleListComponent,
     LessonTabsComponent,
-    // QuizzesComponentComponent,
     QuizzesComponent,
     QuizComponent,
     MultipleChoiceQuestionComponent,
     TrueFalseQuestionComponent,
-    // TestListComponent,
-    // QuizComponentComponent
   ],
   imports: [
     BrowserModule,
