@@ -24,4 +24,16 @@ export class QuizComponent implements OnInit {
     console.log(this.quizId);
     }
 
+  submitQuiz = () => {
+    fetch(`http://localhost:3001/api/quizzes/${this.quizId}/attempts`, {
+      method: 'POST',
+      body: JSON.stringify(this.questions),
+      headers: {
+        'content-type': 'application/json'
+      }
+    }).then(response => response.json())
+      .then(result => console.log(result));
+  }
+
+
 }

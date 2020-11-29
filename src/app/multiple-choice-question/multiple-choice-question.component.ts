@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 import {faCheck, faTimes} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -13,11 +13,20 @@ export class MultipleChoiceQuestionComponent implements OnInit {
   graded = false;
   answer = 'Pending';
 
-  grade = () => {
+  @Output()
+  answerChange = new EventEmitter<string>()
+  submitAnswer = () =>
+    this.answerChange.emit(this.answer)
+
+
+
+grade = () => {
     this.graded = true;
     console.log('this.answer: ', this.answer);
     console.log('this.question.correct: ', this.question.correct);
     console.log('Grading Status: ', this.graded);
+    console.log('answerChange: ', this.answerChange);
+
   }
 
   constructor() { }
