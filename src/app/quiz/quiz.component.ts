@@ -15,16 +15,9 @@ export class QuizComponent implements OnInit {
 
   quizId = '';
   questions = [];
-  ngOnInit(): void {
-    this.route.params.subscribe(ps => {
-      this.quizId = ps.quizId;
-      this.service.findQuestionsForQuiz(this.quizId)
-        .then(qs => this.questions = qs);
-    });
-    console.log(this.quizId);
-    }
 
   submitQuiz = () => {
+    console.log('Submited Initiated');
     fetch(`http://localhost:3001/api/quizzes/${this.quizId}/attempts`, {
       method: 'POST',
       body: JSON.stringify(this.questions),
@@ -32,8 +25,15 @@ export class QuizComponent implements OnInit {
         'content-type': 'application/json'
       }
     }).then(response => response.json())
-      .then(result => console.log(result));
+      .then(result => console.log('Submitted Result: ', result));
   }
 
-
+  ngOnInit(): void {
+    this.route.params.subscribe(ps => {
+      this.quizId = ps.quizId;
+      this.service.findQuestionsForQuiz(this.quizId)
+        .then(qs => this.questions = qs);
+    });
+    console.log('QuizId: ', this.quizId);
+    }
 }

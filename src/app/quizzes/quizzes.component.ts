@@ -14,12 +14,17 @@ export class QuizzesComponent implements OnInit {
 
   courseId = '';
   quizzes = [];
+
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.courseId = params.courseId;
       this.service.findAllQuizzes()
-        .then(quizzes => this.quizzes = quizzes);
+        .then(quizzes => this.quizzes = quizzes)
+        .then(quizzes =>
+          this.quizzes.forEach(quiz => {
+            this.service.findAttemptsForQuiz(quiz._id)
+            .then(attempts => quiz.attempts = attempts);
+        }));
     });
   }
-
 }

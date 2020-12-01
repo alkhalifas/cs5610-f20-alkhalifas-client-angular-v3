@@ -11,16 +11,19 @@ export class MultipleChoiceQuestionComponent implements OnInit {
   @Input()
   question = {_id: '', title: '', question: '', choices: [], correct: '', answer: '' }
   graded = false;
-  answer = 'Pending';
+
+  @Input()
+  answer = '';
 
   @Output()
   answerChange = new EventEmitter<string>()
-  submitAnswer = () =>
-    this.answerChange.emit(this.answer)
+  submitAnswer = () => {
+    this.answerChange.emit(this.answer);
+    this.grade();
+  }
 
-
-
-grade = () => {
+  @Output()
+  grade = () => {
     this.graded = true;
     console.log('this.answer: ', this.answer);
     console.log('this.question.correct: ', this.question.correct);
@@ -32,7 +35,8 @@ grade = () => {
   constructor() { }
 
   ngOnInit(): void {
-    console.log('TF Component');
+    console.log('MC Component');
+    console.log('answer: ', this.answer);
   }
 
 }
