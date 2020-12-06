@@ -18,7 +18,7 @@ export class QuizComponent implements OnInit {
 
   submitQuiz = () => {
     console.log('Submited Initiated');
-    fetch(`http://localhost:3001/api/quizzes/${this.quizId}/attempts`, {
+    fetch(`https://cs5610-node-a9-alkhalifas.herokuapp.com/api/quizzes/${this.quizId}/attempts`, {
       method: 'POST',
       body: JSON.stringify(this.questions),
       headers: {

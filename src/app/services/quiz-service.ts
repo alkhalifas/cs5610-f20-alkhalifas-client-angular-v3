@@ -6,14 +6,14 @@ import {Injectable} from '@angular/core';
 export class QuizzesServiceClient {
 
   findAllQuizzes = () =>
-    fetch('http://localhost:3001/api/quizzes')
+    fetch('https://cs5610-node-a9-alkhalifas.herokuapp.com/api/quizzes')
       .then(response => response.json())
 
   findQuizById = (qid) =>
-    fetch(`http://localhost:3001/api/quizzes/${qid}`)
+    fetch(`https://cs5610-node-a9-alkhalifas.herokuapp.com/api/quizzes/${qid}`)
       .then(response => response.json())
 
   findAttemptsForQuiz = (qid) =>
-    fetch(`http://localhost:3001/api/quizzes/${qid}/attempts`)
+    fetch(`https://cs5610-node-a9-alkhalifas.herokuapp.com/api/quizzes/${qid}/attempts`)
       .then(response => response.json())
 }

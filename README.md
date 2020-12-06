@@ -18,4 +18,9 @@
 ![](./media/A8-Quiz%20Animation.gif)
 
 #### Assignment 9: Persisting Data in Non-Relational Databases with MongoDB and Mongoose
-...coming soon
+- External API was connected to a non-relational MongoDB database using Mongoose.
+- Quizzes component was added for True/False and Multiple Choice which are automatically graded.
+- Graded quizzes are posted to the server, and the grade is displayed along with the attempt #.
+- The API was [deployed to Heroku](https://cs5610-node-a9-alkhalifas.herokuapp.com/api/quizzes/5fc4098f108a931d54a5a9e4/attempts) and is available online.
+
+![](./media/A9-Quiz-Graded.gif)
